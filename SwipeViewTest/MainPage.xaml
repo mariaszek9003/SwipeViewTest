@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:Class="SwipeViewTest.MainPage">
+    <StackLayout
+        Padding="0,40,0,0">
+        <Button
+            Text="Change SwipeView state"
+            x:Name="testButton"/>
+        <SwipeView
+            Grid.Row="0"
+            x:Name="testSwipeView">
+            <SwipeView.RightItems>
+                <SwipeItem
+                    BackgroundColor="Red"
+                    Text="XAML Test"/>
+            </SwipeView.RightItems>
+            <Frame
+                CornerRadius="0"
+                BackgroundColor="PaleGreen">
+            <Label
+                HorizontalOptions="Center"
+                Margin="20"
+                TextColor="Black"
+                FontSize="20"
+                Text="This is swipe view"/>
+            </Frame>
+        </SwipeView>
+        <Label
+            HorizontalOptions="Center"
+            x:Name="testLabel"
+            Text="SwipeView is closed"/>
+    </StackLayout>
+</ContentPage>
